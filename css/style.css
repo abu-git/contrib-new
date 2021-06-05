@@ -1,3 +1,6 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
 /* reset CSS Elements */
 * {
     box-sizing: border-box;
@@ -5,6 +8,183 @@
     margin: 0;
 }
 
-.navbar {
+body {
+    font-family: 'Odibee Sans', cursive;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none; /* remove underline from links */
+    color: black;
+}
+
+/*h1, h2 {
+    margin: 10px 0;  top and bottom margin 10, left and right 0 
+}*/ 
+
+p{
+    margin: 10px 0; /* some margin between paragraphs */
+}
+
+img{
+    width: 100%; /* keeps images within their container */
+}
+
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto; /* top and bottom 0 and auto for left and right */
+    overflow: auto; /* removes space created by h1 margin top */
+    padding: 0 40px;
+}
+
+.flex {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar {
+    height: 70px;
+    background-color: white;
+    color: black;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: black;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px black solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* Showcase */
+/*.showcase{
+    height: 400px;
+    background-color: black;
+    color:white;
+    position: relative;
+}
+
+.showcase h1{
+    font-size: 40px;
+}
+
+.showcase p{
+    margin: 20px 0;
+}
+
+.showcase .grid{
+    overflow: visible; 
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-img{
+    position: relative;
+    top: 60px;
+    height: 300px;
+    width: 400px;
+    justify-self: flex-end;
+}*/
+
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.showcase-img{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.showcase-text{
+    margin-top: 200px;
+    padding: 10px;
+}
+
+.showcase-h1{
+    font-size: 48px;
+    text-align: end;
+}
+
+
+/* Tablets and under */
+@media(max-width: 768px){
+    .grid,
+    .showcase .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase{
+        height: auto;
+    }
+
+    .showcase-text{
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-img{
+        justify-self: center;
+        margin: auto;
+    }
+}
+
+
+/* Mobile */
+@media(max-width: 500px){
+    .navbar {
+        height: 110px;
+        overflow: auto;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        overflow: auto;
+    }
+
+    .navbar a:hover{
+        background-color: cadetblue;
+        overflow: auto;
+    }
 }

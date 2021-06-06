@@ -34,6 +34,17 @@ img{
     width: 100%; /* keeps images within their container */
 }
 
+hr{
+    height: 5px;
+    border-top: 3px solid black;
+}
+
+article{
+    border: 1px solid rgb(107, 95, 95);
+    border-radius: 5px;
+    padding: 20px;
+}
+
 .card {
     background-color: #fff;
     color: #333;
@@ -161,9 +172,16 @@ img{
     padding: 60px 0;
 }
 
+
+.blog{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
 /* Tablets and under */
-@media(max-width: 768px){
-    .grid,
+@media(max-width: 758px){
+    .grid, .blog,
     .showcase .grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;

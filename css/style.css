@@ -157,6 +157,10 @@ img{
 }
 
 
+.breaker{
+    padding: 60px 0;
+}
+
 /* Tablets and under */
 @media(max-width: 768px){
     .grid,
